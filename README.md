@@ -1,13 +1,20 @@
-# 🔗 CryBro CLI
+<div align="center">
 
+```
    ██████╗██████╗ ██╗   ██╗██████╗ ██████╗  ██████╗ 
   ██╔════╝██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔═══██╗
   ██║     ██████╔╝ ╚████╔╝ ██████╔╝██████╔╝██║   ██║
   ██║     ██╔══██╗  ╚██╔╝  ██╔══██╗██╔══██╗██║   ██║
   ╚██████╗██║  ██║   ██║   ██████╔╝██║  ██║╚██████╔╝
    ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ 
+```
 
-A CLI for local crypto development with Anvil.
+**A CLI for local crypto development with Anvil**
+
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+</div>
 
 ## Features
 
@@ -54,9 +61,10 @@ Once in interactive mode:
 
 | Command | Description |
 |---------|-------------|
-| `list` or `ls` | List all scripts in current directory |
-| `run <script>` | Run a script by name or number |
+| `list` or `ls` | List all scripts (including subdirectories) |
+| `run <script>` | Run a script by name, number, or path |
 | `env` | Show current environment variables |
+| `env add NAME=VALUE` | Add a new environment variable |
 | `help` | Show available commands |
 | `exit` or `quit` | Stop Anvil and exit |
 
