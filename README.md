@@ -97,7 +97,7 @@ When Anvil starts, these environment variables are set:
 - `.js` - JavaScript (Node.js)
 - `.ts` - TypeScript (ts-node/tsx)
 - `.sh` - Shell scripts
-- `.sol` - Solidity (display only, use `forge script`)
+- `.sol` - Solidity (runs with `forge script --broadcast`)
 
 ## Example Workflow
 
@@ -110,10 +110,16 @@ crybro
 
 # In interactive mode:
 crybro> ls
-# Shows: deploy.py, test.js, setup.sh
+# Shows scripts from current dir and subdirs:
+#   1  deploy.py
+#   2  scripts/Deploy.s.sol
+#   3  scripts/Token.s.sol
 
-crybro> run deploy.py
-# Runs the script with PRIVATE_KEY available
+crybro> env add ETHERSCAN_API_KEY=abc123
+# ✓ Set ETHERSCAN_API_KEY = abc123
+
+crybro> run 2
+# Runs: forge script scripts/Deploy.s.sol --rpc-url ... --private-key ... --broadcast
 
 crybro> exit
 # Stops Anvil and exits
